@@ -8,6 +8,14 @@
 %define device_pretty Pro1
 
 %define installable_zip 1
+%define droid_target_aarch64 1
+
+# want adreno quirks is required for browser at least, and other subtle issues
+%define android_config \
+#define WANT_ADRENO_QUIRKS 1\
+%{nil}
+
+%define makefstab_skip_entries /mnt/vendor/persist /dev/cpuctl /dev/stune /sys/fs/bpf
 
 %include rpm/dhd/droid-hal-device.inc
 
