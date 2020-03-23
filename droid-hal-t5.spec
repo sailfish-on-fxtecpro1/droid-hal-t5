@@ -1,14 +1,16 @@
 # These and other macros are documented in dhd/droid-hal-device.inc
 # Feel free to cleanup this file by removing comments, once you have memorised them ;)
 
-%define device t5
+%define device QX1000
 %define vendor fxtec
+%define rpm_device t5
 
 %define vendor_pretty F(x)tec
 %define device_pretty Pro1
 
 %define installable_zip 1
 %define droid_target_aarch64 1
+%define enable_kernel_update 1
 
 # want adreno quirks is required for browser at least, and other subtle issues
 %define android_config \
